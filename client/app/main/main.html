@@ -1,0 +1,19 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<sample>Otis Jackson Jr. (born October 24, 1973), known professionally as Madlib, is an American DJ, multi-instrumentalist, rapper, and music producer. He is one of the most prolific and critically acclaimed hip hop producers of the 2000s and has collaborated with different hip hop artists under a variety of pseudonyms, including MF DOOM (as Madvillain), as well as the late J Dilla (as Jaylib). Madlib has described himself as a "DJ first, producer second, and MC last,"[1][2] and he has done several projects as a DJ, mixer, or remixer.
+</sample>
+<hr>
+<textarea ng-model="madlib.inputText" width="1000"></textarea>
+<button class='btn btn-primary' ng-click="submitInputText()">Madlibify</button>
+
+<!-- <div>{{words}}</div> -->
+<div>Adjectives: <span ng-repeat="adjective in adjectives">{{adjective}} </span></div>
+<div>Nouns: <span ng-repeat="noun in nouns">{{noun}} </span></div>
+<div>Adverbs: <span ng-repeat="adverb in adverbs">{{adverb}} </span></div>
+<div>Verbs: <span ng-repeat="verb in verbs">{{verb}} </span></div>
+<div>Rest: <span ng-repeat="word in rest">{{word}} </span></div>
+
+
+
+<div ng-bind-html="taggedText"></div>
+<blockquote ng-bind-html="finishedMadlib"></blockquote>
+<div wordbank-modal></div>

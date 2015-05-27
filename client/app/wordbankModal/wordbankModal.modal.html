@@ -1,0 +1,58 @@
+
+      <div class="" style="padding:15px;">
+        <center><h3 class="page-header">Wordbank</h3><center>
+      </div>
+      <div style="padding:15px;" class="">
+        <div>Adjectives: <span ng-repeat="adjective in wordbank.active.adjectives">{{adjective}} </span></div>
+        <div>Verbs: <span ng-repeat="verb in wordbank.active.verbs">{{verb}} </span></div>
+        <div>Adverbs: <span ng-repeat="adverb in wordbank.active.adverbs">{{adverb}} </span></div>
+        <div>Nouns: <span ng-repeat="noun in wordbank.active.nouns">{{noun}} </span></div>
+        <div>Rest: <span ng-repeat="word in wordbank.active.rest">{{word}} </span></div>
+
+      </div>
+
+
+       <form class="form" name="form" ng-submit="submit(form)" novalidate>
+       <label>Adjectives</label>
+       	<div ng-repeat="adjective in wordbank.active.adjectives">
+	      	<input type="text" ng-model="form.adjectives[$index]"/>
+      	</div>
+      	<label>Verbs</label>
+      	<div ng-repeat="verb in wordbank.active.verbs">
+	      	<input type="text" ng-model="form.verbs[$index]"/>
+      	</div>
+      	<label>Adverbs</label>
+      	<div ng-repeat="adverb in wordbank.active.adverbs">
+	      	<input type="text" ng-model="form.adverbs[$index]"/>
+      	</div>
+      	<label>Nouns</label>
+      	<div ng-repeat="noun in wordbank.active.nouns">
+	      	<input type="text" ng-model="form.nouns[$index]"/>
+      	</div>
+      	<label>Rest</label>
+      	<div ng-repeat="word in wordbank.active.rest">
+	      	<input type="text" ng-model="form.rest[$index]"/>
+      	</div>
+        <div>
+          <button class="btn btn-primary btn-lg btn-login" type="submit">
+            Create Madlib
+          </button>
+
+        </div>
+
+        <div class="form-group has-success">
+          <p class="help-block" ng-show="saveMessage && submitted">
+             Madlib Created!
+          </p>
+
+
+        </div>
+
+
+      </form>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="$dismiss()">Close</button>
+      </div>
+
+
